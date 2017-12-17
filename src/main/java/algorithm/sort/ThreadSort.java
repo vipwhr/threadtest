@@ -11,7 +11,7 @@ public class ThreadSort {
 
     private static Collection<Callable<Integer>> threadList = new ArrayList<Callable<Integer>>();
     private static ExecutorService pool = Executors.newCachedThreadPool();
-    private static int THREAD_SIZE = 8;
+    private static int THREAD_SIZE =4;
 
     public static void sort(int[] param){
         long start = System.currentTimeMillis();
