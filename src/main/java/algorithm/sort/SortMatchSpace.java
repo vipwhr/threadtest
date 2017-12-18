@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class SortMatchSpace {
 
+    public static final String DISK = "D";
     public static final int SIZE = 2500000;
 
     public static void main(String[] args){
@@ -38,7 +39,7 @@ public class SortMatchSpace {
         //int[] param =new int[SIZE];
         Random random = new Random();
         BufferedWriter bufferedWriter = null;
-        File file = new File("E://source.txt");
+        File file = new File(DISK+"://source.txt");
         try {
             FileWriter fileWriter = new FileWriter(file);
             bufferedWriter  = new BufferedWriter(fileWriter);
@@ -68,7 +69,7 @@ public class SortMatchSpace {
     public static int[] getRandomNumber(){
         int[] real = new int[SIZE];
 
-        File file = new File("E://source.txt");
+        File file = new File(DISK+"://source.txt");
         try {
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
