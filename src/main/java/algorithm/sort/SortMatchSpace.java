@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class SortMatchSpace {
 
-    public static final int SIZE = 25000000;
+    public static final int SIZE = 2500000;
 
     public static void main(String[] args){
         System.out.println("START TIME:  " + new Date().toString());
@@ -20,13 +20,14 @@ public class SortMatchSpace {
 
         QuickSort.sort(source);
         HeapSort.sort(getRandomNumber());
+        BucketSort.sort(getRandomNumber());
         MergeSort.sort(getRandomNumber());
         ShellSort.sort(getRandomNumber());
-        //CountSort.sort(getRandomNumber());
+        CountSort.sort(getRandomNumber());
         //InsertSort.sort(getRandomNumber());
         //SelectSort.sort(getRandomNumber());
         //BubbleSort.popSort(getRandomNumber());
-        ThreadSort.sort(getRandomNumber());
+        //ThreadSort.sort(getRandomNumber());
         System.out.println("==========排序完成=============");
         //writeDoneFile(source);
         System.out.println("END TIME:  " + new Date().toString());

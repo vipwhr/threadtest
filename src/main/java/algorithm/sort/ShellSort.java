@@ -1,7 +1,5 @@
 package algorithm.sort;
 
-import java.util.Arrays;
-
 public class ShellSort {
 
     public static void main(String[] args){
