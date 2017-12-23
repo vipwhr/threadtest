@@ -2,7 +2,6 @@ package algorithm.sort;
 
 import java.util.Arrays;
 
-
 public class QuickSort {
 
     public static void fastSort(int[] numbers,int start, int end){
@@ -12,20 +11,19 @@ public class QuickSort {
         int i = start;
         int j = end;
         int flag = numbers[i];
-        while(i != j){
-            while(j != i){
-                if(numbers[j] < flag){
-                    numbers[i] = numbers[j];
-                    break;
-                }
+        while(i < j){
+            while(i<j && numbers[j] >= flag){
                 j--;
             }
-            while(j != i){
-                if(numbers[i] > flag){
-                    numbers[j] = numbers[i];
-                    break;
-                }
+            if(i<j){
+                numbers[i++] = numbers[j];
+            }
+
+            while(i<j && numbers[i] < flag){
                 i++;
+            }
+            if(i<j){
+                numbers[j--] = numbers[i];
             }
         }
         numbers[i] = flag;
@@ -45,5 +43,12 @@ public class QuickSort {
 
         fastSort(param,start,end);
         //System.out.println(Arrays.toString(param));
+    }
+
+
+    static public void main(String[] args){
+        int[] param = {1,5,4,2,3,8,7,9,34,43,64,321,542,3124,233};
+        sort(param);
+        System.out.println(Arrays.toString(param));
     }
 }

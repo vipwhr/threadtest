@@ -6,12 +6,12 @@ import java.util.Random;
 
 public class SortMatchSpace {
 
-    public static final String DISK = "D";
-    public static final int SIZE = 2500000;
+    public static final String DISK = "E";
+    public static final int SIZE = 10000000;
 
     public static void main(String[] args){
         System.out.println("START TIME:  " + new Date().toString());
-        makeRandomNumber();
+        //makeRandomNumber();
         System.out.println("==========开始读取 " +SIZE+ " 随机数==========");
         int[] source = getRandomNumber();
         System.out.println("==========读取完成，共计 " +SIZE+ " 随机数==========");
@@ -20,15 +20,15 @@ public class SortMatchSpace {
 
 
         QuickSort.sort(source);
-        HeapSort.sort(getRandomNumber());
-        BucketSort.sort(getRandomNumber());
-        MergeSort.sort(getRandomNumber());
-        ShellSort.sort(getRandomNumber());
-        CountSort.sort(getRandomNumber());
+        //HeapSort.sort(getRandomNumber());
+        //BucketSort.sort(getRandomNumber());
+        //MergeSort.sort(getRandomNumber());
+        //ShellSort.sort(getRandomNumber());
+        //CountSort.sort(getRandomNumber());
         //InsertSort.sort(getRandomNumber());
         //SelectSort.sort(getRandomNumber());
         //BubbleSort.popSort(getRandomNumber());
-        //ThreadSort.sort(getRandomNumber());
+        ThreadSort.sort(getRandomNumber());
         System.out.println("==========排序完成=============");
         //writeDoneFile(source);
         System.out.println("END TIME:  " + new Date().toString());
